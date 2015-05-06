@@ -1,0 +1,16 @@
+body {
+  padding:10px;
+}
+
+div {
+  margin:50px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#list {
+  border:5px solid blue;
+}
