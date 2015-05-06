@@ -1,8 +1,9 @@
 $(function() {
   var display_contacts = function(index, contact) {
-    var display = $("<h1>").css('color', 'blue').text(contact.name);
-    $("<h3>").text(contact.email).prepend(display).appendTo("#list");
-    $("<h3>").text(contact.phone_number).prepend(display).prependTo("#list");    
+    var div = $("<h1>").css('color', 'blue').text(contact.name);
+    $("<p>").text(contact.email).prepend(div).prependTo("#border");
+    $("<p>").text(contact.phone_number).prepend(div).prependTo("#border");
+    $("<hr>").prependTo("#border");   
   }
 
   function get_contacts(contacts) {
