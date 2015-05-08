@@ -5,11 +5,7 @@ get '/' do
 
 end
 
-get '/new' do
-  contact = Contact.new
-  content_type :json
-    contacts.to_json
-end
+
 
 get '/contacts' do
   contacts = Contact.all
@@ -17,10 +13,18 @@ get '/contacts' do
     contacts.to_json
 end
 
-get '/new' do
+post '/create' do
   @contact = Contact.new(name: params[:name], email: params[:email], phone_number: params[:phone_number])
-  if @contact.save
-    redirect to('/index')
-  end
+  @contact.save
+  # if @contact.save
+  #   content_type :json
+  #     return @contact.to_json
+  # end
 end
 
+get '/search' do
+  search = params[:search]
+  contacts = Contact.where("name LIKE ? OR email LIKE ? OR phone_number LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
+  content_type :json
+    contacts.to_json
+end

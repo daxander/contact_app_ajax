@@ -1,23 +1,54 @@
-<h1>You Can Never Code Too Many Contact Apps</h1>
+<header id="0">
+  <h1 contenteditable="true">2Many ContactApps</h1>
+ <!--  <div id="menu">
+    <ul><li>Top</li>
+    <li>About</li>
+    <li>
+      Contacts
+      <ul id="contacts">
+      </ul>
+    </li>
+    <li>Blog</li>
+    <li>Contact</li>
+  </ul>
+</div> -->
+</header>
 
-
+<div class="wrapper">
 <div class="new-form">
-    <form action="/new" method="get">
-     <h2 class="new-contact-title">New Contact</h1>
-    
+  <div class="center">
+    <form id="form" action="/create" method="post">
+     <h2 class="new-contact-title">New Contact</h2>
     <input id="name" type="text" name="name" placeholder="Name"><br>
-
     <input id="phone_number" type="text" name="phone_number" placeholder="Phone Number"><br>
     <input id="email" type="text" name="email" placeholder="Email"><br>
-    <input id="submit" type="submit" value="New Contact">
+    <input class="btn-style" id="submit" type="submit" value="New Contact">
   </form>
+  </div>
+</div>
+
+<div class="search-form">
+  <div class="center">
+  <form id="search" action="/search" method="get">
+  <h2>Search Contacts</h2>
+    <input type="text" name="search" placeholder="Search"><br>
+    <input class="btn-style" id="search-btn" type="submit" value="Search Contacts">
+  </form>
+  </div>
 </div>
 
 
 
 <div class="list">
-<button id='btn'>Load Contacts</button>
-<div id="border">
+<div class="center">
+<h2>Load Contacts</h2>
+<button class="btn-style" id='btn'>Load Contacts</button>
 </div>
 </div>
+</div>
+<div id="flash"></div>
+<div id="list"></div>
+
+<footer><a href="#0" class="cd-top"><h1>Top</h1></a></footer>
+
 
