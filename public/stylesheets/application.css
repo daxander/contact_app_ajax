@@ -72,6 +72,24 @@ footer h1 {
   inset 0 5px 5px rgba(255,255,255,1); 
 }
 
+input {
+  background: transparent;
+    border: 2px solid #dadada;
+    border-radius: 7px;
+    color: white;
+    margin:2px;
+}
+
+input:focus { 
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+button#btn.btn-style {
+  border: 2px solid #dadada;
+
+}
+
 .btn-style {
   margin-top: 5px;
   -moz-box-shadow: 0px 10px 14px -7px #276873;
@@ -110,19 +128,9 @@ footer h1 {
 }
 
 
-input {
-  background: transparent;
-    border: 2px solid #dadada;
-    border-radius: 7px;
-    color: white;
-    margin:2px;
-}
 
-input:focus { 
-    outline: none;
-    border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
-}
+
+
 
 .menu {
   float: right;
